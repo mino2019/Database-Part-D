@@ -15,7 +15,7 @@ drop table Owners;
 create table Owners (
 	OwnerID		varchar(10)	NOT NULL,
 	OwnerFName	varchar(10),
-	OwnerlLName	varchar(10),
+	OwnerLName	varchar(10),
 	OwnerEmail	varchar(50),
 	OwnerContact	int
 	PRIMARY KEY (OwnerID)
