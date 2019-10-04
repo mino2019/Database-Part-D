@@ -1,7 +1,30 @@
 /* Database Fundamentals, Assignment Part D 
 Jaiden Chicote jaiden.chicote@student.uts.eu.au
 
+This database constructs the owner, the property owned by owner and the advertisement based on the property. 
 
-
+Website: https://www.domain.com.au/
 
 */
+
+
+-- Coded Jaiden Chicote
+
+drop table Owners;
+
+create table Owners (
+	OwnerID		varchar(10)	NOT NULL,
+	OwnerFName	varchar(10),
+	OwnerlLName	varchar(10),
+	OwnerEmail	varchar(50),
+	OwnerContact	int
+	PRIMARY KEY (OwnerID)
+);
+
+insert into Owners values ('O019285', 'Micky', 'Jones', 'micky.jones@gmail.com', 0923876543);
+insert into Owners values ('O197612', 'Neo', 'Anderson', 'neo.anderson@hotmail.com', 0456743985);
+insert into Owners values ('O985328', 'Juliet', 'Chicote', 'juliet_chicote@gmail.com', 0410762354);
+insert into Owners values ('O784321', 'Abby', 'Taperston', 'abby_Tap@msn.com', 0319872345);
+insert into Owners (OwnerID, OwnerFName, OwnerLName, OwnerEmail) values ('O856431', 'Andy', 'Lockertson', andy_loc@hotmail.com);
+insert into Owners values ('O397422', 'Julia', 'Somerson', 'julia.somerson@gmail.com', 0467943128);
+
