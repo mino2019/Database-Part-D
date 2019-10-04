@@ -1,1 +1,7 @@
-/* Database Fundamentals, Assignment Part D */
+/* Database Fundamentals, Assignment Part D 
+Jaiden Chicote jaiden.chicote@student.uts.eu.au
+
+
+
+
+*/
