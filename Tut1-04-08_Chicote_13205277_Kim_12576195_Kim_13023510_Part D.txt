@@ -1,11 +1,10 @@
-/* Database Fundamentals, Assignment Part D 
-Jaiden Chicote jaiden.chicote@student.uts.eu.au
+/* 	Database Fundamentals, Assignment Part D 	
+ 	Jaiden Chicote jaiden.chicote@student.uts.eu.au	
 
-This database constructs the owner, the property owned by owner and the advertisement based on the property. 
+	This database constructs the owner, the property
+	owned by owner and the advertisement based on the property.
 
-Website: https://www.domain.com.au/
-
-*/
+	Website: https://www.domain.com.au/	*/
 
 
 -- Coded Jaiden Chicote
@@ -17,7 +16,7 @@ create table Owners (
 	OwnerFName	varchar(10),
 	OwnerLName	varchar(10),
 	OwnerEmail	varchar(50),
-	OwnerContact	int
+	OwnerContact	int,
 	PRIMARY KEY (OwnerID)
 );
 
@@ -25,6 +24,24 @@ insert into Owners values ('O019285', 'Micky', 'Jones', 'micky.jones@gmail.com',
 insert into Owners values ('O197612', 'Neo', 'Anderson', 'neo.anderson@hotmail.com', 0456743985);
 insert into Owners values ('O985328', 'Juliet', 'Chicote', 'juliet_chicote@gmail.com', 0410762354);
 insert into Owners values ('O784321', 'Abby', 'Taperston', 'abby_Tap@msn.com', 0319872345);
-insert into Owners (OwnerID, OwnerFName, OwnerLName, OwnerEmail) values ('O856431', 'Andy', 'Lockertson', andy_loc@hotmail.com);
+insert into Owners (OwnerID, OwnerFName, OwnerLName, OwnerEmail) values ('O856431', 'Andy', 'Lockertson', 'andy_loc@hotmail.com');
 insert into Owners values ('O397422', 'Julia', 'Somerson', 'julia.somerson@gmail.com', 0467943128);
+
+insert into Owners values ('O112924', 'Kylie', 'Cook', 'kylie.cook@gmail.com', 0940294768);
+insert into Owners values ('O907066', 'Dayami', 'Archer', 'dayami_archer@hotmail.com', 0653689630);
+insert into Owners values ('O858242', 'Jaidyn', 'Woodard', 'jaidyn.woodard@gmail.com', 0928452997);
+insert into Owners values ('O467689', 'Jazmyn', 'Stout', 'jazmyn_stout@msn.com', 0513775588);
+insert into Owners (OwnerID, OwnerFName, OwnerLName, OwnerEmail) values ('O840716', 'Milagros', 'Marshall', 'milagros_marshall@hotmail.com');
+insert into Owners values ('O451674', 'Dallas', 'Middleton', 'dallas_middleton@gmail.com', 0591864571);
+
+insert into Owners values ('O579628', 'Royce', 'Olsen', 'royce_olsen@gmail.com', 0684497047);
+insert into Owners values ('O932653', 'Cassidy', 'Lee', 'cassidy_lee@hotmail.com', 0470079641);
+insert into Owners values ('O760124', 'Cody', 'Mccarthy', 'cody_mccarthy@gmail.com', 0558192786);
+
+create table Ownership (
+    OwnerID     varchar(10)	NOT NULL,
+    PropertyID  varchar(10) NOT NULL,
+    FOREIGN KEY (OwnerID) references Owners,
+    FOREIGN KEY (PropertyID) references Property
+)
 
