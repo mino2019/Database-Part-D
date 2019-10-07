@@ -43,5 +43,34 @@ create table Ownership (
     PropertyID  varchar(10) NOT NULL,
     FOREIGN KEY (OwnerID) references Owners,
     FOREIGN KEY (PropertyID) references Property
+
+create table Property
+(
+    PropertyID  varchar(10) NOT NULL,
+    StreetNO         varchar(10),
+    StreetName       varchar(10),
+    PropertyPostcode NUMERIC(4),
+    Suburb           varchar(20),
+    State            varchar(15),
+    NoBedrooms       NUMERIC(100),
+    NoBathrooms      NUMERIC(100),
+    NoParking        NUMERIC(100),
+    PropertyType     character(10),
+    BuildArea        varchar(1000),
+    LandArea         varchar(1000)
+
+
+);
+
+insert into Property values ('15', 'Oyama Avenue', '2095', 'Manly', 'New South Wales', '4', '3', '2', 'House', '319sqm', '609sqm');
+insert into Property values ('10', 'Cowper Street', '2580', 'Goulbourn', 'New South Wales', '7', '4', '4', 'House', '1280sqm', '2701sqm');
+insert into Property values ('5', 'Plunkett Road', '2088', 'Mossman', 'New South Wales', '4', '4', '2', 'House', '412sqm', '701sqm');
+insert into Property values ('95', 'Sunnyside Crescent', '2068', 'Castlecrag', 'New South Wales', '4', '2', '1', 'House', '407sqm', '835sqm');
+insert into Property values ('419', 'Lacmalac Road', '2720', 'Tumut', 'New South Wales', '4', '2', '2', 'House', '528sqm', '2.7ha');
+insert into Property values ('15', 'Dobbie Avenue', '2518', 'East Corrimal', 'New South Wales', '6', '4', '3', 'House', '497sqm', '706sqm');
+insert into Property values ('14', 'Whale Beach Road', '2107', 'Whale Beach', 'New South Wales', '4', '3', '2', 'House', '687sqm', '982sqm');
+insert into Property values ('9-15', 'Bayswater Road', '2011', 'Potts Point', 'New South Wales', '3', '3', '2', 'Apartment', '149sqm', '149sqm');
+insert into Property values ('10-10', 'Paxton Street', '4810', 'North Ward', 'Queensland', '2', '1', '1', 'Apartment', '94sqm', '94sqm');
+
 )
 
